@@ -3,5 +3,6 @@
   { "title": "Essay Two",   "author": "frog and eagle", "place": "Coming soon", "date": "2026-02-03", "url": "essays/essay-two.html" },
   { "title": "Essay Three", "author": "frog and eagle", "place": "Coming soon", "date": "2025-10-21", "url": "essays/essay-three.html" },
   { "title": "Essay Four",  "author": "frog and eagle", "place": "Coming soon", "date": "2025-06-08", "url": "essays/essay-four.html" },
-  { "title": "Essay Five",  "author": "frog and eagle", "place": "Coming soon", "date": "2026-06-08", "url": "essays/essay-five.html" }
+  { "title": "Essay Five",  "author": "frog and eagle", "place": "Coming soon", "date": "2026-06-08", "url": "essays/essay-five.html" },
+  { "title": "Test Essay",  "author": "James Shaw", "place": "Tagline here", "date": "2026-06-14", "url": "essays/test-essay.html" }
 ]
