@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ════════════════════════════════════════════════════════════════
+     NEW ESSAY? EDIT ONLY THE 4 LINES INSIDE THIS BOX.
+     Then write your essay further down, in the BODY section.
+     ════════════════════════════════════════════════════════════════ -->
+<script>
+  const ESSAY = {
+    title:   "Essay Title Goes Here",
+    author:  "frog and eagle",
+    date:    "2026-01-01",            // YYYY-MM-DD — controls the year shown
+    tagline: "A one-line standfirst that sits under the title."  // or "" for none
+  };
+</script>
+<!-- ════════════════════════════════════════════════════════════════ -->
+
+<title>Loading… — frog and eagle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz@0,6..72;1,6..72&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #ece7dd;
+    --ink-dim: #a39b8c;
+    --bg: #14130f;
+    --rule: #34322a;
+    --accent: #b9683f;
+    --measure: 85ch;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 19px; line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 28px; }
+
+  /* Top bar */
+  .topbar {
+    display: flex; justify-content: space-between; align-items: baseline;
+    max-width: 920px; margin: 0 auto; padding: 26px 28px;
+    flex-wrap: wrap; gap: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .nameplate { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.4rem; letter-spacing: -0.01em; }
+  .nameplate a { color: var(--ink); text-decoration: none; }
+  nav { display: flex; gap: 22px; font-family: 'Fraunces', serif;
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  nav a { color: var(--ink-dim); text-decoration: none; transition: color 0.2s; }
+  nav a:hover, nav a:focus-visible { color: var(--accent); }
+
+  /* Essay header */
+  .essay-head { padding: 80px 0 48px; border-bottom: 1px solid var(--rule); }
+  .eyebrow {
+    font-family: 'Fraunces', serif; font-size: 0.78rem;
+    text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--accent); margin-bottom: 24px;
+  }
+  .essay-head h1 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+  .standfirst {
+    margin-top: 22px; font-size: 1.2rem; line-height: 1.5;
+    color: var(--ink-dim); max-width: 52ch; font-style: italic;
+  }
+  .standfirst:empty { display: none; }
+  .byline {
+    margin-top: 26px; font-family: 'Fraunces', serif;
+    font-size: 0.92rem; color: var(--ink-dim);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .byline span { color: var(--accent); }
+
+  /* Body */
+  article { padding: 56px 0 40px; }
+  article p { max-width: var(--measure); margin-bottom: 1.3em; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+  article p:last-child { margin-bottom: 0; }
+  article em { font-style: italic; }
+  .dropcap::first-letter {
+    font-family: 'Fraunces', serif; font-size: 3.4em;
+    float: left; line-height: 0.8; padding: 6px 10px 0 0; color: var(--accent);
+  }
+
+  .coming-soon {
+    font-family: 'Fraunces', serif; font-style: italic;
+    font-size: 1.4rem; color: var(--ink-dim);
+  }
+
+  /* Footer / back link */
+  .essay-foot { padding: 40px 0 70px; border-top: 1px solid var(--rule); }
+  .back {
+    font-family: 'Fraunces', serif; font-size: 0.95rem;
+    color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--accent); padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+  .back:hover, .back:focus-visible { color: var(--accent); }
+
+  @media (max-width: 600px) {
+    body { font-size: 18px; }
+    .wrap, .topbar { padding-left: 20px; padding-right: 20px; }
+    .essay-head { padding: 56px 0 36px; }
+    article { padding: 40px 0 32px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="nameplate"><a href="../index.html">the frog and the eagle</a></div>
+    <nav>
+      <a href="../index.html#essays">Essays</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+
+  <main class="wrap">
+    <header class="essay-head">
+      <div class="eyebrow">Essay</div>
+      <!-- title, standfirst, and byline fill in automatically from ESSAY above -->
+      <h1 id="essay-title"></h1>
+      <p class="standfirst" id="essay-standfirst"></p>
+      <div class="byline">By <span id="essay-author"></span> · <span id="essay-date"></span></div>
+    </header>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BODY — write your essay here, as normal HTML paragraphs.
+         · First paragraph: keep class="dropcap" for the big initial letter.
+         · Every other paragraph: just <p>...</p>.
+         · Italics: <em>like this</em>.
+         When ready, DELETE the single "coming-soon" line below and write.
+         ════════════════════════════════════════════════════════════ -->
+    <article>
+
+      <p class="coming-soon">Coming soon.</p>
+
+      <!--
+      <p class="dropcap">Your opening sentence carries the dropcap, and the rest
+      of the first paragraph flows on from here just as you'd expect.</p>
+
+      <p>Second paragraph. Write as many <p>…</p> blocks as you like. Use
+      <em>emphasis</em> wherever it helps.</p>
+      -->
+
+    </article>
+
+    <footer class="essay-foot">
+      <a class="back" href="../index.html#essays">← Back to all essays</a>
+    </footer>
+  </main>
+
+  <!-- Fills the title/standfirst/byline + page <title> from the ESSAY box up top. Don't edit. -->
+  <script>
+    (function () {
+      document.getElementById('essay-title').textContent      = ESSAY.title;
+      document.getElementById('essay-author').textContent     = ESSAY.author;
+      // Turn "2026-01-15" into "January 2026". The T00:00:00 avoids timezone drift.
+      const d = new Date((ESSAY.date || '') + 'T00:00:00');
+      const prettyDate = isNaN(d)
+        ? (ESSAY.date || '')
+        : d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+      document.getElementById('essay-date').textContent       = prettyDate;
+      document.getElementById('essay-standfirst').textContent = ESSAY.tagline || '';
+      document.title = ESSAY.title + ' — frog and eagle';
+    })();
+  </script>
+
+</body>
+</html>
