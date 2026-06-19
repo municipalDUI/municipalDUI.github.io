@@ -1,5 +1,3 @@
 [
-  { "title": "Test Essay",  "author": "James Shaw", "place": "Tagline here", "date": "2026-06-14", "url": "essays/test-essay.html" },
-  { "title": "Test Essay 2",  "author": "James Shaw", "place": "Tagline here", "date": "2026-01-01", "url": "essays/test-essay2.html" },
-  { "title": "No Title",  "author": "U. Montgomery Cruill", "place": "Tagline here", "date": "2024-05-03", "url": "essays/NN_grantFin.html" }
+  { "title": "Political Purgatory",  "author": "U. Montgomery Cruill", "place": "To collapsing countries there usually comes a man on a horse", "date": "2024-05-03", "url": "essays/Political_Purgatory.html" }
 ]
