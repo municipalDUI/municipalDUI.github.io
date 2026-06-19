@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ════════════════════════════════════════════════════════════════
+     NEW ESSAY? EDIT ONLY THE 4 LINES INSIDE THIS BOX.
+     Then write your essay further down, in the BODY section.
+     ════════════════════════════════════════════════════════════════ -->
+<script>
+  const ESSAY = {
+    title:   "Political Purgatory",
+    author:  "U. Montgomery Cruill",
+    date:    "2024-05-03",            // YYYY-MM-DD — controls the year shown
+    tagline: "To collapsing countries there usually comes a man on a horse.",  // or "" for none
+    kind:    "Essay"                  // the little label up top — e.g. Opinion, History, Review
+  };
+</script>
+<!-- ════════════════════════════════════════════════════════════════ -->
+
+<title>Loading… — frog and eagle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz@0,6..72;1,6..72&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #ece7dd;
+    --ink-dim: #a39b8c;
+    --bg: #14130f;
+    --rule: #34322a;
+    --accent: #b9683f;
+    --measure: 85ch;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 19px; line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 28px; }
+
+  /* Top bar */
+  .topbar {
+    display: flex; justify-content: space-between; align-items: baseline;
+    max-width: 920px; margin: 0 auto; padding: 26px 28px;
+    flex-wrap: wrap; gap: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .nameplate { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.4rem; letter-spacing: -0.01em; }
+  .nameplate a { color: var(--ink); text-decoration: none; transition: color 0.2s; }
+  .nameplate a:hover, .nameplate a:focus-visible { color: var(--accent); }
+  nav { display: flex; gap: 22px; font-family: 'Fraunces', serif;
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  nav a { color: var(--ink-dim); text-decoration: none; transition: color 0.2s; }
+  nav a:hover, nav a:focus-visible { color: var(--accent); }
+
+  /* Essay header */
+  .essay-head { padding: 80px 0 48px; border-bottom: 1px solid var(--rule); }
+  .eyebrow {
+    font-family: 'Fraunces', serif; font-size: 0.78rem;
+    text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--accent); margin-bottom: 24px;
+  }
+  .essay-head h1 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+  .standfirst {
+    margin-top: 22px; font-size: 1.2rem; line-height: 1.5;
+    color: var(--ink-dim); max-width: 52ch; font-style: italic;
+  }
+  .standfirst:empty { display: none; }
+  .byline {
+    margin-top: 26px; font-family: 'Fraunces', serif;
+    font-size: 0.92rem; color: var(--ink-dim);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .byline span { color: var(--accent); }
+
+  /* Body */
+  article { padding: 56px 0 40px; }
+  article p { max-width: var(--measure); margin-bottom: 1.3em; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+  article p:last-child { margin-bottom: 0; }
+  article em { font-style: italic; }
+  .dropcap::first-letter {
+    font-family: 'Fraunces', serif; font-size: 3.4em;
+    float: left; line-height: 0.8; padding: 6px 10px 0 0; color: var(--accent);
+  }
+
+  .coming-soon {
+    font-family: 'Fraunces', serif; font-style: italic;
+    font-size: 1.4rem; color: var(--ink-dim);
+  }
+
+  /* Footer / back link */
+  .essay-foot { padding: 40px 0 70px; border-top: 1px solid var(--rule); }
+  .back {
+    font-family: 'Fraunces', serif; font-size: 0.95rem;
+    color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--accent); padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+  .back:hover, .back:focus-visible { color: var(--accent); }
+
+  @media (max-width: 600px) {
+    body { font-size: 18px; }
+    .wrap, .topbar { padding-left: 20px; padding-right: 20px; }
+    .essay-head { padding: 56px 0 36px; }
+    article { padding: 40px 0 32px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="nameplate"><a href="../index.html">the frog and the eagle</a></div>
+    <nav>
+      <a href="../index.html#essays">Essays</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+
+  <main class="wrap">
+    <header class="essay-head">
+      <div class="eyebrow" id="essay-kind"></div>
+      <!-- title, standfirst, and byline fill in automatically from ESSAY above -->
+      <h1 id="essay-title"></h1>
+      <p class="standfirst" id="essay-standfirst"></p>
+      <div class="byline">By <span id="essay-author"></span> · <span id="essay-date"></span></div>
+    </header>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BODY — write your essay here, as normal HTML paragraphs.
+         · First paragraph: keep class="dropcap" for the big initial letter.
+         · Every other paragraph: just <p>...</p>.
+         · Italics: <em>like this</em>.
+         When ready, DELETE the single "coming-soon" line below and write.
+         ════════════════════════════════════════════════════════════ -->
+    <article>
+
+      <p class="dropcap">In many ways I had entirely written off the 2024 election. 
+        I wanted to believe, it's easy to fall into the escapism of what could be. 
+        I like to dream about where this country could go if we ever took back power, 
+        but I know better than to delude myself. </p>
+
+      <p>2020 was a revolution, one that I didn't realize until long after. I spent all 
+        of 2022 trying to right those wrongs. I really believed we could make things work 
+        in Pennsylvania, and from there; go on to save our country, or at least some of it, 
+        in 24’. I wanted to stand alongside the men of action who might actually do it. In 
+        the end our fight was in vain, the Democrats had secured their election through harvesting 
+        mail-in ballots by August, a time when our field team was only beginning to ramp up its 
+        canvassing efforts.</p>
+
+      <p>These realizations painted a different picture of politics for me. The punches I took 
+        completely de-energized, and even “de-radicalized” my political inclinations. I came 
+        to accept that I was “along for the ride” for a little while, and it was best to keep 
+        my head down - Soviet in retrospect.</p>
+
+      <p>I speculated moving into sales, or marketing, something I could escape the impending 
+        Covid economic drain with. Those efforts never formulated into anything real. But the 
+        least of my expectations would be that 2024 could give us a repeat of the 
+        “<span style="color: var(--accent);">Summer of Love</span>.”</p>
+
+      <p>George Floyd’s death and subsequent mass mobilizations were an absolute shock to me in 2020. 
+        My initial reactions were completely sympathetic to Floyd, the videos shared were cropped 
+        only to show his frantic final moments before succumbing to his injuries. It was powerful stuff, 
+        to hear a man cry out for his life. But as time went on, details of his criminal past emerged, 
+        other angles became available, and it became entirely clear that George Floyd had died of a 
+        drug overdose, to no fault of Derek Chauvin. By then however, Floyd had emerged as their martyr.</p>
+      
+      <p>Protests became riots, leaders emboldened them. COVID restrictions remained in play for everyone 
+        EXCEPT those who embarked in the name of Floyd. Cities burned, Autonomous zones formed, and 
+        shadowed figures threatened their will in the suburbs.</p>
+
+      <p>Everything began to swirl. I sat powerless wondering “Who will save us?” Too many stood by, 
+        and ultimately Trump saw his political demise. This is a revolution in its purest form, 
+        complete mobilization of the masses and a transition of political power.</p>
+
+      <p>Reflecting on the left's victory, it solidified my idea that nothing could happen in 2024, 
+        “They’ve already got the guy they want in, what’s there to riot over this election cycle?” 
+        I’d analyze and re-analyze possibilities in 2023, but no conclusions ever lead to a repeat 
+        of Summer 2020.</p>
+
+      <p>Man was I wrong. I failed in having any clairvoyance for what was to come.  What I 
+        mean is the “Bolshevik” types, the actual ANTIFA capable, and willing to use violence, 
+        alongside the DSA/College Socialist “Menshevik” types cannibalizing the same Liberals 
+        they formed ranks with in 2020. It is our emerging 1917 moment, but somehow my own 
+        history evades me.</p>
+
+      <p>2020 was a demand for reform, a vision shared by socialists and liberals alike. 
+        Go check the homicide charts and ask me if they got their way. By 2023 some, and 
+        by some I mean a few, violence trends began to peak and “reverse,” but a generation 
+        of criminals was still emboldened.</p>
+
+      <p>It all brings me back to early August of 2020 sitting alone on my floor reading Fred 
+        Reed's blog post on UNZ titled “It’s all gonna blow.”</p>
+
+      <p>“To collapsing countries these usually comes a man on a horse. A man with a big stick. 
+        You know, 1789, 1917, 1933. That kind of thing.”</p>
+        
+      <p>America’s left were rewarded with an eventual change policing procedure. They won’t 
+        just “back off” of this one. Like in 1968, the war protests only faded as our role in 
+        Vietnam diminished.</p>
+
+      <p>What's most interesting is the split in Jews this time around. Those who led on the 
+        forefront of dismantling “Racist White Power Structures” in 2020 (and before) have 
+        now seen their golems turn on them in supporting decolonization of the West Bank and 
+        Gaza. To understand the entire picture, you’ve got to recognize the role that Jews 
+        have gladly taken up in America’s social revolutions since the 1960’s. In their 
+        (successful) attempt at dismantling WASP hegemony, they failed to divest themselves 
+        from the shadow of white identity. In many cases, American Jews have existed in the 
+        category of “White with an asterisk”.</p>
+
+      <p>And now, the same foreigners they supported refugee status for, the same "anti-racist" 
+        education curriculums they helped develop, and the same grassroots organizations they 
+        helped to found have all turned on them, even non-religious ethnic Jews show them the 
+        cold shoulder, why?</p>
+
+      <p>The failure to assimilate and Americanize the bulk of post-1965 immigrants, who after 
+        generations of anti-white propaganda, can only see color, and cannot distinguish between 
+        “white with an asterisk” Jews and founding stock “huwhite” Gentiles.  This is the bulk 
+        of your Pro-Palestinian camp. Their struggle is one against “White settler colonialism,” 
+        and Zionism to them is just another form of “Whiteness.”</p>
+
+      <p>It becomes clear that it was only by chance that Jews got lumped in with us, and this 
+        puts Pro-Israel religious Jews in a very precarious situation - Support the destruction 
+        of your own people and homeland by allying with those who hate you (NOT happening), or 
+        allying with suburban Whites you’ve always blended in with, but remained wary of.</p>
+
+      <p>You’ve got to understand that in order for ANY broad “grassroots” push back to come 
+        against the Palestinian camp, that it would necessitate the fostering of a national 
+        spirit and PRO white sentiments - Something Jews have vehemently opposed because well, 
+        look at what happened to them in Germany. Luckily, for them, big players like AIPAC 
+        have secured an amass of pro-jewish legislators. One’s who take no restraint in 
+        throwing around the force of the state on its political enemies - That is until our 
+        next Kent State or George Floyd moment arises.</p>
+
+      <p>So what is next? I write this on the morning of May 3rd, 2024 Sometimes you don’t 
+        exactly get to <em>choose</em> your teammates, but nonetheless, an enemy is still an enemy, 
+        and circumstance is still circumstance - and when it all comes to a head that we 
+        stand together in bludgeoning socialists, then I say, “So be it.”</p>
+
+    </article>
+
+    <footer class="essay-foot">
+      <a class="back" href="../index.html#essays">← Back to all essays</a>
+    </footer>
+  </main>
+
+  <!-- Fills the title/standfirst/byline + page <title> from the ESSAY box up top. Don't edit. -->
+  <script>
+    (function () {
+      document.getElementById('essay-kind').textContent       = ESSAY.kind || 'Essay';
+      document.getElementById('essay-title').textContent      = ESSAY.title;
+      document.getElementById('essay-author').textContent     = ESSAY.author;
+      // Turn "2026-01-15" into "January 2026". The T00:00:00 avoids timezone drift.
+      const d = new Date((ESSAY.date || '') + 'T00:00:00');
+      const prettyDate = isNaN(d)
+        ? (ESSAY.date || '')
+        : d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+      document.getElementById('essay-date').textContent       = prettyDate;
+      document.getElementById('essay-standfirst').textContent = ESSAY.tagline || '';
+      document.title = ESSAY.title + ' — frog and eagle';
+    })();
+  </script>
+
+</body>
+</html>
