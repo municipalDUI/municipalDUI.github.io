@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steve McDanger — frog and eagle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz@0,6..72;1,6..72&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #ece7dd;
+    --ink-dim: #a39b8c;
+    --bg: #14130f;
+    --bg-soft: #1b1a15;
+    --rule: #34322a;
+    --accent: #b9683f;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---- Top bar ---- */
+  .topbar {
+    display: flex; justify-content: space-between; align-items: baseline;
+    max-width: 820px; margin: 0 auto; padding: 26px 28px;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .nameplate {
+    font-family: 'Fraunces', serif; font-weight: 500;
+    font-size: 1.4rem; letter-spacing: -0.01em;
+  }
+  .nameplate a { color: var(--ink); text-decoration: none; transition: color 0.2s; }
+  .nameplate a:hover, .nameplate a:focus-visible { color: var(--accent); }
+  nav { display: flex; gap: 22px; font-family: 'Fraunces', serif;
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  nav a { color: var(--ink-dim); text-decoration: none; transition: color 0.2s; }
+  nav a:hover, nav a:focus-visible { color: var(--accent); }
+
+  /* ---- ASCII treeline (the signature) ---- */
+  .treeline {
+    margin: 30px 0 10px;
+    position: relative;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 18px;
+    overflow: hidden;
+  }
+  .treeline pre {
+    font-family: 'Courier New', ui-monospace, monospace;
+    font-size: clamp(7px, 1.55vw, 13px);
+    line-height: 1.0;
+    color: var(--ink-dim);
+    white-space: pre;
+    text-align: center;
+    /* a faint mist sits over the lower trunks */
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, rgba(0,0,0,0.45) 100%);
+            mask-image: linear-gradient(180deg, #000 0%, #000 72%, rgba(0,0,0,0.45) 100%);
+  }
+  /* each vertical slice of the forest sways on its own slight offset */
+  .treeline .sway {
+    display: inline-block;
+    animation: sway 7s ease-in-out infinite alternate;
+    transform-origin: bottom center;
+  }
+  @keyframes sway {
+    from { transform: translateX(-0.18em) skewX(0.6deg); }
+    to   { transform: translateX(0.18em) skewX(-0.6deg); }
+  }
+
+  /* ---- Author identity ---- */
+  .author-head { padding: 26px 0 4px; }
+  .eyebrow {
+    font-family: 'Fraunces', serif; font-size: 0.78rem;
+    text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--accent); margin-bottom: 16px;
+  }
+  .author-head h1 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(2.4rem, 7vw, 4rem); line-height: 1.04;
+    letter-spacing: -0.025em;
+  }
+  .author-head h1 em { font-style: italic; color: var(--accent); }
+
+  /* ---- Bio ---- */
+  .bio { padding: 30px 0 60px; }
+  .bio p {
+    max-width: 60ch; font-size: 1.2rem;
+    line-height: 1.66; margin-bottom: 1.15em; color: var(--ink);
+  }
+  .bio p:last-child { margin-bottom: 0; }
+  .bio em { color: var(--accent); font-style: italic; }
+
+  footer {
+    padding: 36px 0 60px; font-family: 'Fraunces', serif;
+    font-size: 0.78rem; color: var(--ink-dim);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    border-top: 1px solid var(--rule);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    body { font-size: 18px; }
+    .wrap { padding: 0 20px; }
+    .topbar { padding: 20px; }
+    .bio p { font-size: 1.12rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="nameplate"><a href="../index.html">the frog and the eagle</a></div>
+    <nav>
+      <a href="../index.html#essays">Writings</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+
+  <div class="wrap">
+
+    <!-- ===== SIGNATURE: swaying ASCII treeline ===== -->
+    <!-- This art is unique to this author. To make another author's page,
+         copy this file and replace the <pre> contents below + the name/bio. -->
+    <div class="treeline" aria-hidden="true">
+      <pre id="forest"></pre>
+    </div>
+
+    <header class="author-head">
+      <div class="eyebrow">Contributor</div>
+      <h1>Steve <em>McDanger</em></h1>
+    </header>
+
+    <section class="bio">
+      <p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing</em> elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Praesent commodo cursus magna vel scelerisque.</p>
+      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum.</p>
+      <p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+    </section>
+
+    <footer>
+      © 2026 frog and eagle. &nbsp;·&nbsp; <a href="../index.html">← Back home</a>
+    </footer>
+  </div>
+
+<script>
+  // ===== ASCII treeline generator =====
+  // Builds a row of pines of varying heights, then wraps vertical slices
+  // in .sway spans so the forest rocks gently like wind through timber.
+  // Reduced-motion users get the static art (CSS disables the animation).
+
+  (function () {
+    const ROWS = 14;          // height of the art in characters
+    const COLS = 120;         // width in characters (clipped by container)
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // A pine is a triangle of '/' '\' with a trunk; we stamp several across.
+    // Build a 2D grid of spaces, then draw trees into it.
+    const grid = Array.from({ length: ROWS }, () => Array(COLS).fill(' '));
+
+    function drawTree(cx, height, baseRow) {
+      // crown: rows of widening foliage
+      for (let r = 0; r < height; r++) {
+        const row = baseRow - height + r;
+        if (row < 0 || row >= ROWS) continue;
+        const half = r;                      // foliage widens as we descend
+        const left = cx - half, right = cx + half;
+        if (left >= 0 && left < COLS)  grid[row][left]  = '/';
+        if (right >= 0 && right < COLS) grid[row][right] = '\\';
+        // sprinkle inner texture on the widest lower rows
+        if (r > height * 0.55) {
+          for (let x = left + 1; x < right; x++) {
+            if (x >= 0 && x < COLS && Math.random() < 0.18) {
+              grid[row][x] = Math.random() < 0.5 ? '^' : '\'';
+            }
+          }
+        }
+      }
+      // trunk
+      const trunkRow = baseRow;
+      if (trunkRow >= 0 && trunkRow < ROWS && cx >= 0 && cx < COLS) {
+        grid[trunkRow][cx] = '|';
+      }
+    }
+
+    // Scatter trees across the width at varied heights / baselines.
+    let x = 2;
+    while (x < COLS - 2) {
+      const h = 5 + Math.floor(Math.random() * 7);      // 5..11 tall
+      const base = ROWS - 1 - Math.floor(Math.random() * 2); // sit near bottom
+      drawTree(x, h, base);
+      x += 3 + Math.floor(Math.random() * 4);           // spacing between trunks
+    }
+
+    // Ground line
+    for (let c = 0; c < COLS; c++) {
+      if (grid[ROWS - 1][c] === ' ') grid[ROWS - 1][c] = '.';
+    }
+
+    // Convert grid -> text rows
+    const lines = grid.map(row => row.join(''));
+
+    const forest = document.getElementById('forest');
+
+    if (reduce) {
+      forest.textContent = lines.join('\n');
+      return;
+    }
+
+    // For sway: split each LINE into vertical slices isn't trivial in text,
+    // so instead we wrap the whole block in staggered sway columns by
+    // slicing every line at the same column boundaries and stacking spans.
+    const SLICES = 10;
+    const sliceW = Math.ceil(COLS / SLICES);
+    const cols = [];
+    for (let s = 0; s < SLICES; s++) {
+      const start = s * sliceW, end = Math.min(COLS, start + sliceW);
+      const colLines = lines.map(l => l.slice(start, end));
+      cols.push(colLines);
+    }
+
+    // Build spans: each slice is an inline-block that sways with its own delay.
+    // We reassemble by printing line-by-line, but to keep monospace alignment
+    // we render each slice as its own <pre>-like column via a wrapper.
+    // Simpler + robust: stagger the whole forest as overlapping sway layers
+    // is fragile, so we apply a single sway to alternating slices for a
+    // believable wind shear without breaking grid alignment.
+    let html = '';
+    for (let r = 0; r < ROWS; r++) {
+      let rowHtml = '';
+      for (let s = 0; s < SLICES; s++) {
+        const seg = cols[s][r].replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        const delay = (s % 5) * 0.6;        // staggered wind across the stand
+        const dur = 6 + (s % 3);            // slight variation in gust speed
+        rowHtml += `<span class="sway" style="animation-delay:${delay}s;animation-duration:${dur}s">${seg}</span>`;
+      }
+      html += rowHtml + '\n';
+    }
+    forest.innerHTML = html;
+  })();
+</script>
+
+</body>
+</html>
